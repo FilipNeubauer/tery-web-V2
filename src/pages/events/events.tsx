@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
 
 // IMAGES
 import IMG_1790_2 from "./assets/IMG_1790_2.jpg";
@@ -88,11 +88,16 @@ const Events = () => {
     ]
 
     return (
-        <div>
-            <h1>EVENTS</h1>
+        <div style={{padding: "0 1rem"}}>
+            <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"}}>Events</Typography>
             
-            <TableContainer>
+            <TableContainer >
                 <Table>
+                    <colgroup>
+                        <col style={{ width: `${100/3}%`}}></col>
+                        <col style={{ width: `${100/3}%`}}></col>
+                        <col style={{ width: `${100/3}%`}}></col>
+                    </colgroup>
                     <TableBody>
                         {
                             images.map(({ row }) => {
@@ -102,7 +107,7 @@ const Events = () => {
                                             row.map(({ src }) => {
                                                 return (
                                                     <TableCell sx={{ borderBottom: "none"}}>
-                                                        <img src={src} height={300} />
+                                                        <img src={src} width="100%" />
                                                     </TableCell>
                                                 )
                                             })

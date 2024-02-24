@@ -1,6 +1,6 @@
 import { Collapse, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { StyleSheet } from "../pages/home/Home";
@@ -16,6 +16,7 @@ const NavList = ({ open, setOpen }: Props) => {
     const [brands, setBrands] = useState(false);
     const [proejcts, setProjects] = useState(false);
 
+
     const styles: StyleSheet = {
         footer: {
             display: "flex",
@@ -29,6 +30,14 @@ const NavList = ({ open, setOpen }: Props) => {
             transition: "transform 0.3s ease-in-out"
         }
     }
+
+    useEffect(() => {
+        if (location.pathname.startsWith("/brands")) {
+            setBrands(true);
+        } else {
+            setBrands(false);
+        }
+    }, [location.pathname])
 
     return (
         <List style={{ marginTop: "32px", color: "white" }} >

@@ -14,7 +14,10 @@ const styles: StyleSheet = {
         // height: "100vh"
         backgroundImage: "url(src/pages/home/assets/IMG_3316.jpeg)",
         backgroundSize: "cover",
-        // backgroundPosition: "center",
+        backgroundPosition: "center",
+        "-webkit-background-size": "cover",
+        "-moz-background-size": "cover",
+        "-o-background-size": "cover",
         height: "100vh",
         display: "flex",
         justifyContent: "center",

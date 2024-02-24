@@ -30,7 +30,7 @@ const styles: StyleSheet = {
         flexWrap: "wrap",
         alignItems: "center",
         height: "7rem",
-        padding: "1rem"
+        padding: "1rem 2rem"
     },
     rotate: {
         transformOrigin: "center",
