@@ -1,3 +1,6 @@
+import { Typography } from "@mui/material";
+import { useEffect, useRef } from "react";
+
 export interface StyleSheet {
     [key: string]: React.CSSProperties;
 }
@@ -29,15 +32,16 @@ const styles: StyleSheet = {
 const Home = () => {
 
 
+
     return (
         <div style={styles.main}>
             <div style={styles.content}>
                 {/* <img src="src/pages/home/assets/IMG_3316.jpeg" h /> */}
                 <div style={styles.textContent}>
-                    <h1>TEREZA STOKLASOVÁ</h1>
-                    <h3>@tery_stoklasova</h3>
-                    <h3>@terysphotos</h3>
-                    <h2>photographer & art director</h2>
+                    <Typography style={{ fontFamily: "Playfair Display", fontSize: "3rem" }}>TEREZA STOKLASOVÁ</Typography>
+                    <Typography variant="h3" style={{ paddingTop: "1rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.5rem"}}>@tery_stoklasova</Typography>
+                    <Typography variant="h3" style={{ paddingTop: "0.5rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.5rem"}}>@terysphotos</Typography>
+                    <Typography variant="h2" style={{ paddingTop: "1rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "2rem"}}>photographer & art director</Typography>
                 </div>
             </div>
         </div>
