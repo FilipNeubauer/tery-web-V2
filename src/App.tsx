@@ -5,6 +5,7 @@ import Portfolio from "./pages/portfolio/portfolio"
 import Events from "./pages/events/events"
 import WearOfAbsolue from "./pages/brands/wearofabsolue/WearOfAbsolue"
 import LashStudio from "./pages/brands/lash-studio/LasStudio"
+import ConceptFlannel from "./pages/brands/concept-flannel/ConceptFlannel"
 
 function App() {
 
@@ -29,6 +30,10 @@ function App() {
       {
         path: "/brands/lashstudio",
         element: <LashStudio />
+      },
+      {
+        path: "/brands/conceptflannel",
+        element: <ConceptFlannel />
       }
     ]
   )
