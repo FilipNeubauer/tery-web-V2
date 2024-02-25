@@ -7,6 +7,7 @@ import WearOfAbsolue from "./pages/brands/wearofabsolue/WearOfAbsolue"
 import LashStudio from "./pages/brands/lash-studio/LasStudio"
 import ConceptFlannel from "./pages/brands/concept-flannel/ConceptFlannel"
 import Mayam from "./pages/brands/mayam/Mayam"
+import Brands from "./pages/brands/Brands"
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
       {
         path: "/events",
         element: <Events />
+      },
+      {
+        path: "/brands",
+        element: <Brands />
       },
       {
         path: "/brands/wearofabsolue",
