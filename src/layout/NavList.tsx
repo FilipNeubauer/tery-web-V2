@@ -100,7 +100,7 @@ const NavList = ({ open, setOpen }: Props) => {
                         </List>
                     </Collapse>
                     
-                    <ListItem disablePadding>
+                    {/* <ListItem disablePadding>
                         <ListItemIcon sx={{ minWidth: 0, paddingLeft: 0, paddingRight: 0}} >
                             <IconButton sx={{ paddingLeft: 0, paddingRight: 0}} style={{ ...styles.rotate, transform: proejcts ? "rotate(-180deg)" : "rotate(0)" }} onClick={() => setProjects(prev => !prev)}>
                                 <KeyboardArrowDownIcon sx={{ paddingLeft: 0, paddingRight: 0, color: "white"}} />
@@ -109,9 +109,9 @@ const NavList = ({ open, setOpen }: Props) => {
                         <ListItemButton onClick={() => setOpen(false)} component={Link} to={"/projects"} sx={{ paddingLeft: 0}} >
                             <ListItemText primary={<Typography sx={{ fontWeight: location.pathname === "/projects" ? "bold" : "normal" }}>PROJECTS</Typography>} />
                         </ListItemButton>
-                    </ListItem>
+                    </ListItem> */}
 
-                    <Collapse in={proejcts} orientation="vertical"  >
+                    {/* <Collapse in={proejcts} orientation="vertical"  >
                         <List component="div" disablePadding>
                             <ListItem disablePadding>
                                 <ListItemButton sx={{ pl: 4 }} onClick={() => {setOpen(false); setProjects(false)}} component={Link} to={"/brands/creative-shoot"} >
@@ -119,7 +119,7 @@ const NavList = ({ open, setOpen }: Props) => {
                                 </ListItemButton>
                             </ListItem>
                         </List>
-                    </Collapse>
+                    </Collapse> */}
 
                     <ListItem disablePadding>
                         <ListItemButton onClick={() => setOpen(false)} component={Link} to={"/contact"} >
