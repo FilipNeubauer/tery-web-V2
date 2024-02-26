@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import image from "./assets/IMG_3316.jpeg";
 
 export interface StyleSheet {
     [key: string]: React.CSSProperties;
@@ -11,7 +12,7 @@ const styles: StyleSheet = {
         // alignItems: "center",
         // overflow: "hidden",
         // height: "100vh"
-        backgroundImage: "url(src/pages/home/assets/IMG_3316.jpeg)",
+        backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         // "-webkit-background-size": "cover",
