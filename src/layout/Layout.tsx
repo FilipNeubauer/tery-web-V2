@@ -1,5 +1,5 @@
 // MUI
-import { Button, Collapse, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material"
+import { Drawer, IconButton, Typography } from "@mui/material"
 
 // REACT
 import { useEffect, useState } from "react"
@@ -7,8 +7,6 @@ import { useEffect, useState } from "react"
 // ICONS
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
-import { DisplaySettings } from "@mui/icons-material";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 // STYELS
@@ -71,11 +69,11 @@ const Layout = ({ children }: Props) => {
 
             {
                 !isWideScreen &&
-                <nav style={{ position: "absolute", display: "flex", flexDirection: "row", alignItems: "center" }}>
+                <nav style={{ position: location.pathname !== "/" ? "fixed" : "absolute", display: "flex", flexDirection: "row", alignItems: "center", background: location.pathname !== "/" ? "white": "none", width: location.pathname !== "/" ? "100%": "" }}>
                     <div style={{ zIndex: 1300 }}>
-                        <Hamburger color="white" size={23} toggled={open} toggle={setOpen} /> 
+                        <Hamburger color={location.pathname === "/" || open ? "white": "rgba(28,28,28,1)" } size={23} toggled={open} toggle={setOpen} /> 
                     </div>
-                    <Typography component={Link} to={"/"} variant="h2" sx={{ fontSize: "1.2rem", color: "white", fontWeight: 400, textDecoration: "none"  }}>@tery_stoklasova</Typography>
+                    <Typography component={Link} to={"/"} variant="h2" sx={{ fontSize: "1.2rem", color: location.pathname === "/" ? "white": "rgba(28,28,28,1)", fontWeight: 400, textDecoration: "none"  }}>@tery_stoklasova</Typography>
                 </nav>
             }
 
@@ -94,7 +92,7 @@ const Layout = ({ children }: Props) => {
                 isWideScreen && <LeftNav/>
             }
 
-            <main style={{ marginLeft: isWideScreen ? "250px" : 0 }}>
+            <main style={{ marginLeft: isWideScreen ? "250px" : 0, paddingTop: location.pathname === "/" ? 0 : "2rem" }}>
                 {children}
             </main>
             <footer style={{...styles.footer, marginLeft: isWideScreen ? "250px" : 0}}>

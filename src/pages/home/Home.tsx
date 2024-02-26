@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import { useEffect, useRef } from "react";
 
 export interface StyleSheet {
     [key: string]: React.CSSProperties;
@@ -15,9 +14,9 @@ const styles: StyleSheet = {
         backgroundImage: "url(src/pages/home/assets/IMG_3316.jpeg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        "-webkit-background-size": "cover",
-        "-moz-background-size": "cover",
-        "-o-background-size": "cover",
+        // "-webkit-background-size": "cover",
+        // "-moz-background-size": "cover",
+        // "-o-background-size": "cover",
         height: "100vh",
         display: "flex",
         justifyContent: "center",

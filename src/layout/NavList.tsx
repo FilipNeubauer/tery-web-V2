@@ -12,9 +12,8 @@ type Props = {
     setOpen: (b: boolean) => void 
 }
 
-const NavList = ({ open, setOpen }: Props) => {
+const NavList = ({ setOpen }: Props) => {
     const [brands, setBrands] = useState(false);
-    const [proejcts, setProjects] = useState(false);
 
 
     const styles: StyleSheet = {
