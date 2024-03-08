@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
 import { images } from "./photos";
 
 // Images
