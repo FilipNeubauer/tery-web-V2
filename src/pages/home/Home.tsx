@@ -41,10 +41,10 @@ const Home = () => {
             <div style={styles.content}>
                 {/* <img src="src/pages/home/assets/IMG_3316.jpeg" h /> */}
                 <div style={styles.textContent}>
-                    <Typography style={{ fontFamily: "Playfair Display", fontSize: "3rem" }}>TEREZA STOKLASOVÁ</Typography>
-                    <Typography variant="h3" style={{ paddingTop: "1rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.5rem"}}>@tery_stoklasova</Typography>
-                    <Typography variant="h3" style={{ paddingTop: "0.5rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.5rem"}}>@terysphotos</Typography>
-                    <Typography variant="h2" style={{ paddingTop: "1rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "2rem"}}>photographer & art director</Typography>
+                    <Typography style={{ fontFamily: "Playfair Display", fontSize: "2rem" }}>TEREZA STOKLASOVÁ</Typography>
+                    <Typography variant="h3" style={{ paddingTop: "1rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.2rem"}}>@tery_stoklasova @terysphotos</Typography>
+                    {/* <Typography variant="h3" style={{ paddingTop: "0.5rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.5rem"}}></Typography> */}
+                    <Typography variant="h2" style={{ paddingTop: "1rem", fontFamily: "Roboto", fontWeight: 100, fontSize: "1.2rem"}}>photographer & art director</Typography>
                 </div>
             </div>
         </div>

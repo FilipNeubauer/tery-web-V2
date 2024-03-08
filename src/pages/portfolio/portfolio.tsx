@@ -10,8 +10,8 @@ const Portfolio = () => {
 
 
     return (
-        <div style={{ padding: "0 1rem" }}>   
-            <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"}}>Portfolio</Typography>
+        <div style={{ padding: "2rem 1rem 1rem" }}>   
+            {/* <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"}}>Portfolio</Typography> */}
             
             <TableContainer>
                 <Table>
@@ -28,7 +28,7 @@ const Portfolio = () => {
                                         {
                                             row.map(({ src }) => {
                                                 return (
-                                                    <TableCell sx={{ borderBottom: "none"}} align="center">
+                                                    <TableCell style={{ lineHeight: 0, padding: "0.3rem" }} sx={{ borderBottom: "none"}} align="center">
                                                         <img src={src} style={{ width: "100%"}} />
                                                     </TableCell>
                                                 )

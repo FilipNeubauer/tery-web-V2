@@ -20,7 +20,7 @@ const LeftNav = () => {
 
     return (
         <section style={styles.navbar}>
-            <Typography style={{marginTop: "5rem"}} fontFamily={"Roboto"} fontSize={"1.5rem"} color={"white"}>@tery_stoklasova</Typography>
+            <Typography style={{marginTop: "5rem"}} fontFamily={"Roboto"} fontSize={"1.3rem"} color={"white"}>@tery_stoklasova</Typography>
             <NavList open={false} setOpen={() => {}} />
         </section>
     )

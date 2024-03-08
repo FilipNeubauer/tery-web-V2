@@ -88,8 +88,8 @@ const Events = () => {
     ]
 
     return (
-        <div style={{padding: "0 1rem"}}>
-            <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"}}>Events</Typography>
+        <div style={{padding: "2rem 1rem 1rem"}}>
+            {/* <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"  }}>Events</Typography> */}
             
             <TableContainer >
                 <Table>
@@ -106,7 +106,7 @@ const Events = () => {
                                         {
                                             row.map(({ src }) => {
                                                 return (
-                                                    <TableCell sx={{ borderBottom: "none"}}>
+                                                    <TableCell style={{ lineHeight: 0, padding: "0.3rem"}} sx={{ borderBottom: "none"}}>
                                                         <img src={src} width="100%" />
                                                     </TableCell>
                                                 )
