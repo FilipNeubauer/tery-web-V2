@@ -3,6 +3,7 @@ import IMG_9866 from "./wearofabsolue/assets/IMG_9866.jpg";
 import IMG_5147 from "./lash-studio/assets/IMG_5147.jpg";
 import IMG_6945 from "./concept-flannel/assets/IMG_6945.jpg"
 import IMG_0679 from "./mayam/assets/IMG_0679.jpg";
+import IMG_7464 from "./loice/assets/IMG_7464.jpg";
 import { Link } from "react-router-dom";
 
 const Brands = () => {
@@ -23,6 +24,14 @@ const Brands = () => {
                     </Link>
                     <Typography variant="h2" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "1.5rem", color: "white"}}>Lash Studio</Typography>
                 </div>
+
+                <div style={{ maxWidth: "20rem", padding: "1rem" }}>
+                    <Link to={"/brands/loice"}>
+                        <img src={IMG_7464} style={{ width: "100%"}} />
+                    </Link>
+                    <Typography variant="h2" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "1.5rem", color: "white"}}>Loice</Typography>
+                </div>
+                
 
                 <div style={{ maxWidth: "20rem", padding: "1rem" }}>
                     <Link to={"/brands/conceptflannel"}>

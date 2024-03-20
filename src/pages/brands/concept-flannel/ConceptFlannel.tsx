@@ -22,7 +22,7 @@ const ConceptFlannel = () => {
                                     {
                                         row.map(({ src }) => {
                                             return (
-                                                <TableCell sx={{ borderBottom: "none"}} align="center">
+                                                <TableCell style={{ lineHeight: 0, padding: "0.3rem" }} sx={{ borderBottom: "none"}} align="center">
                                                     <img src={src} style={{ width: "100%"}} />
                                                 </TableCell>
                                             )

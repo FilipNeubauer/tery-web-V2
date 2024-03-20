@@ -10,6 +10,7 @@ import Mayam from "./pages/brands/mayam/Mayam"
 import Brands from "./pages/brands/Brands"
 import About from "./pages/about/About"
 import Contact from "./pages/contact/Contact"
+import Loice from "./pages/brands/loice/Loice"
 
 function App() {
 
@@ -42,6 +43,10 @@ function App() {
       {
         path: "/brands/lashstudio",
         element: <LashStudio />
+      },
+      {
+        path: "/brands/loice",
+        element: <Loice />
       },
       {
         path: "/brands/conceptflannel",

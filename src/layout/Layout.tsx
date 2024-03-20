@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 
 // ICONS
 import Hamburger from "hamburger-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 // STYELS
@@ -69,8 +69,8 @@ const Layout = ({ children }: Props) => {
 
             {
                 !isWideScreen &&
-                <nav style={{ position: open ? "absolute" : "fixed", display: "flex", justifyContent: "space-between", flexDirection: "row", alignItems: "center", background: location.pathname !== "/" ? "black": "none", width: location.pathname !== "/" ? "100%": "100%" }}>
-                    <Typography component={Link} to={"/"} variant="h2" sx={{ fontSize: "1rem", color: location.pathname === "/" ? "white": "white", fontWeight: 400, textDecoration: "none", marginLeft: "1rem"  }}>@tery_stoklasova</Typography>
+                <nav style={{ position: open ? "absolute" : "fixed", display: "flex", justifyContent: "flex-end", flexDirection: "row", alignItems: "center", background: location.pathname !== "/" ? "black": "none", width: location.pathname !== "/" ? "100%": "100%" }}>
+                    {/* <Typography component={Link} to={"/"} variant="h2" sx={{ fontSize: "1rem", color: location.pathname === "/" ? "white": "white", fontWeight: 400, textDecoration: "none", marginLeft: "1rem"  }}>@tery_stoklasova</Typography> */}
                     <div style={{ zIndex: 1300 }}>
                         <Hamburger direction="right" color={location.pathname === "/" || open ? "white": "white" } size={23} toggled={open} toggle={setOpen} /> 
                     </div>
@@ -82,7 +82,7 @@ const Layout = ({ children }: Props) => {
                 open={open}
                 onClose={() => setOpen(false)}
                 anchor="right"
-                PaperProps={{ sx: { backgroundColor: "rgba(28,28,28,1)", width: !isWideScreen ? "100%" : ""}}}
+                PaperProps={{ sx: { backgroundColor: "black", width: !isWideScreen ? "100%" : ""}}}
             >
                 <NavList open={open} setOpen={setOpen} />
 
@@ -100,8 +100,8 @@ const Layout = ({ children }: Props) => {
                     <InstagramIcon />
                 </IconButton>
                 <div>
-                    <Typography style={{ textAlign:"right", fontSize: "1rem", color: "white", fontWeight: 100}}>EMAIL <a target="_blank" style={{ color: "white" }} href="mailto:terystoklasova@seznam.cz">terystoklasova@seznam.cz</a></Typography>
-                    <Typography style={{textAlign:"right",  fontSize: "1rem", color: "white", fontWeight: 100}}>TEL <a target="_blank" style={{ color: "white" }} href="tel:+420 605 575 031">+420 605 575 031</a></Typography>
+                    <Typography style={{ textAlign:"right", fontSize: "0.8rem", color: "white", fontWeight: 100}}>EMAIL <a target="_blank" style={{ color: "white" }} href="mailto:terystoklasova@seznam.cz">terystoklasova@seznam.cz</a></Typography>
+                    {/* <Typography style={{textAlign:"right",  fontSize: "0.8rem", color: "white", fontWeight: 100}}>TEL <a target="_blank" style={{ color: "white" }} href="tel:+420 605 575 031">+420 605 575 031</a></Typography> */}
                 </div>
 
             </footer>

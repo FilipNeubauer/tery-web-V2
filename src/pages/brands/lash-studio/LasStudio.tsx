@@ -22,7 +22,7 @@ const LashStudio = () => {
                                     {
                                         row.map(({ src }) => {
                                             return (
-                                                <TableCell sx={{ borderBottom: "none"}}>
+                                                <TableCell style={{ lineHeight: 0, padding: "0.3rem" }} sx={{ borderBottom: "none"}}>
                                                     <img src={src} width={"100%"} />
                                                 </TableCell>
                                             )

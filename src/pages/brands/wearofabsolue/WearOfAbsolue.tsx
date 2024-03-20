@@ -4,6 +4,9 @@ import { Table, TableBody, TableCell, TableContainer, TableRow, Typography } fro
 import IMG_9866 from "./assets/IMG_9866.jpg";
 import IMG_0180 from "./assets/IMG_0180.jpg";
 
+import IMG_9781 from "./assets/IMG_9781.jpg";
+
+
 import IMG_6238 from "./assets/IMG_6238.jpg";
 import IMG_9976 from "./assets/IMG_9976.jpg";
 import IMG_9976_2 from "./assets/IMG_9976_2.jpg";
@@ -14,6 +17,9 @@ import IMG_0127 from "./assets/IMG_0127.jpg";
 import IMG_0111 from "./assets/IMG_0111.jpg";
 import IMG_0182 from "./assets/IMG_0182.jpg";
 import IMG_9893 from "./assets/IMG_9893.jpg";
+
+import IMG_6216 from "./assets/IMG_6216.jpg";
+import IMG_5205 from "./assets/IMG_5205.jpg";
 
 const WearOfAbsolue = () => {
 
@@ -26,7 +32,9 @@ const WearOfAbsolue = () => {
                 {
                     src: IMG_0180
                 },
-                
+                {
+                    src: IMG_9781
+                }
             ]
         },
         {
@@ -63,6 +71,9 @@ const WearOfAbsolue = () => {
                 {
                     src: IMG_0127
                 },
+                {
+                    src: IMG_6216
+                }
             ]
         },
         {
@@ -73,7 +84,9 @@ const WearOfAbsolue = () => {
                 {
                     src: IMG_9893
                 },
-
+                {
+                    src: IMG_5205
+                }
             ]
         }
     ]
@@ -97,7 +110,7 @@ const WearOfAbsolue = () => {
                                         {
                                             row.map(({ src }) => {
                                                 return (
-                                                    <TableCell sx={{ borderBottom: "none"}}>
+                                                    <TableCell style={{ lineHeight: 0, padding: "0.3rem" }} sx={{ borderBottom: "none"}}>
                                                         <img src={src} width={"100%"} />
                                                     </TableCell>
                                                 )

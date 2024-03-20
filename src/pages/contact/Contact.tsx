@@ -10,7 +10,7 @@ const Contact = () => {
                 <Typography style={{ paddingBottom: "0.5rem" ,  textAlign:"left", fontSize: "1rem", color: "white", fontWeight: 100}}>Tereza Stoklasová</Typography>
                 <Typography style={{ paddingBottom: "0.5rem", textAlign:"left", fontSize: "1rem", color: "white", fontWeight: 100}}><a style={{ color: "white"}} target="_blank" href="https://www.instagram.com/tery_stoklasova/">Instagram</a></Typography>
                 <Typography style={{ paddingBottom: "0.5rem", textAlign:"left", fontSize: "1rem", color: "white", fontWeight: 100}}><a style={{ color: "white"}} target="_blank" href="mailto:terystoklasova@seznam.cz">terystoklasova@seznam.cz</a></Typography>
-                <Typography style={{ paddingBottom: "0.5rem", textAlign:"left",  fontSize: "1rem", color: "white", fontWeight: 100}}><a style={{ color: "white"}} target="_blank" href="tel:+420 605 575 031">+420 605 575 031</a></Typography>
+                {/* <Typography style={{ paddingBottom: "0.5rem", textAlign:"left",  fontSize: "1rem", color: "white", fontWeight: 100}}><a style={{ color: "white"}} target="_blank" href="tel:+420 605 575 031">+420 605 575 031</a></Typography> */}
             </div>
 
         </div>    
