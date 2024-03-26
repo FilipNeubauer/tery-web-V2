@@ -6,7 +6,7 @@ import IMG_4920 from "./assets/IMG_4920.jpg";
 import IMG_5327 from "./assets/IMG_5327.jpg";
 import IMG_4872 from "./assets/IMG_4872.jpg";
 import IMG_4871 from "./assets/IMG_4871.jpg";
-import IMG_5371 from "./assets/IMG_5327.jpg";
+import IMG_5371 from "./assets/IMG_5371.jpg";
 import IMG_5276 from "./assets/IMG_5276.jpg";
 import IMG_4899 from "./assets/IMG_4899.jpg";
 import IMG_4972 from "./assets/IMG_4972.jpg";
