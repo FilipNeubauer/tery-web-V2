@@ -9,7 +9,7 @@ import IMG_4871 from "./assets/IMG_4871.jpg";
 import IMG_5371 from "./assets/IMG_5371.jpg";
 import IMG_5276 from "./assets/IMG_5276.jpg";
 import IMG_4899 from "./assets/IMG_4899.jpg";
-import IMG_4972 from "./assets/IMG_4972.jpg";
+// import IMG_4972 from "./assets/IMG_4972.jpg";
 
 export const images = [
     {
@@ -63,7 +63,7 @@ export const images = [
                 src: IMG_4899
             },
             {
-                src: IMG_4972
+                src: IMG_4871
             }
         ],
         rowNum: 4

@@ -103,13 +103,9 @@ const Portfolio = () => {
                 </Table>
             </TableContainer>
 
-            <Dialog open={open} onClose={() => setOpen(false)}>
+            <Dialog open={open} onClose={() => setOpen(false)} style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }} PaperProps={{ style: { overflowY: "hidden", }}} sx={{ overflowY: "hidden"}}>
                 <div style={{ height: "100%", width: "4rem", position: "absolute" }} onClick={hanldeBack}></div>
-                    <img src={img?.src} />
-                    {/* <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", backgroundColor: "black"}}>
-                        <IconButton style={{ color: "white"}} onClick={hanldeBack}><ArrowBackIosRoundedIcon /></IconButton>
-                        <IconButton style={{ color: "white"}} onClick={hanldeNext}><ArrowForwardIosRoundedIcon /></IconButton>
-                    </div> */}
+                    <img src={img?.src} style={{ width: "100%" }} />
                 <div style={{ height: "100%", width: "4rem", position: "absolute", right: 0 }} onClick={hanldeNext}></div>
             </Dialog>
         </div>
