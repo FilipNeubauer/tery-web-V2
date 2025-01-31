@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow: auto;
-    background-color: black;
+    background-color: white;
 }
 
 #root {
