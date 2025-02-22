@@ -1,5 +1,4 @@
 import {
-  Dialog,
   Table,
   TableBody,
   TableCell,
@@ -9,6 +8,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import ImageDialog from "../../../components/imageDialog";
 
 const images = [
   {
@@ -106,7 +107,7 @@ const Unlike = () => {
     setOpen(true);
   };
 
-  const hanldeNext = () => {
+  const handleNext = () => {
     if (img) {
       const newObj = {
         ...img,
@@ -127,7 +128,7 @@ const Unlike = () => {
     }
   };
 
-  const hanldeBack = () => {
+  const handleBack = () => {
     if (img) {
       const newObj = {
         ...img,
@@ -159,7 +160,7 @@ const Unlike = () => {
           fontSize: "3rem",
         }}
       >
-        Lash Studio
+        Unlike
       </Typography>
       <TableContainer>
         <Table>
@@ -180,7 +181,15 @@ const Unlike = () => {
                         style={{ lineHeight: 0, padding: "0.3rem" }}
                         sx={{ borderBottom: "none" }}
                       >
-                        <img src={src} width={"100%"} />
+                        <LazyLoadImage
+                          threshold={500}
+                          loading="eager"
+                          effect="blur"
+                          src={src}
+                          width={"100%"}
+                          visibleByDefault={false}
+                          style={{ minHeight: 100 }}
+                        />
                       </TableCell>
                     );
                   })}
@@ -191,28 +200,13 @@ const Unlike = () => {
         </Table>
       </TableContainer>
 
-      <Dialog
-        open={open}
+      <ImageDialog
         onClose={() => setOpen(false)}
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
-        PaperProps={{ style: { overflowY: "hidden" } }}
-        sx={{ overflowY: "hidden" }}
-      >
-        <div
-          style={{ height: "100%", width: "4rem", position: "absolute" }}
-          onClick={hanldeBack}
-        ></div>
-        <img src={img?.src} style={{ width: "100%" }} />
-        <div
-          style={{
-            height: "100%",
-            width: "4rem",
-            position: "absolute",
-            right: 0,
-          }}
-          onClick={hanldeNext}
-        ></div>
-      </Dialog>
+        open={open}
+        pressBack={handleBack}
+        pressNext={handleNext}
+        img={img?.src}
+      />
     </div>
   );
 };

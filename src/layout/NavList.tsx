@@ -69,27 +69,6 @@ const NavList = ({ setOpen }: Props) => {
         <ListItemButton
           onClick={() => setOpen(false)}
           component={Link}
-          to={"/about"}
-        >
-          <ListItemText
-            sx={{ textAlign: "center" }}
-            primary={
-              <Typography
-                sx={{
-                  fontWeight:
-                    location.pathname === "/about" ? "bold" : "normal",
-                }}
-              >
-                ABOUT ME
-              </Typography>
-            }
-          />
-        </ListItemButton>
-      </ListItem>
-      <ListItem disablePadding>
-        <ListItemButton
-          onClick={() => setOpen(false)}
-          component={Link}
           to={"/portfolio"}
         >
           <ListItemText

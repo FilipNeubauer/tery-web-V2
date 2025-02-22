@@ -1,109 +1,134 @@
-import { Dialog, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import { images } from "./photos";
 import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import ImageDialog from "../../../components/imageDialog";
 
 const Mayam = () => {
+  const [open, setOpen] = useState(false);
 
-    const [open, setOpen] = useState(false);
+  const [img, setImg] = useState<IMG>();
 
-    const [img, setImg] = useState<IMG>();
+  const handleChange = (row: number, index: number) => {
+    const obj = {
+      src: images[row].row[index].src,
+      index,
+      row,
+    };
+    setImg(obj);
+    setOpen(true);
+  };
 
-    const handleChange = (row: number, index: number) => {
-        const obj = {
-            src: images[row].row[index].src,
-            index,
-            row
+  const handleNext = () => {
+    if (img) {
+      const newObj = {
+        ...img,
+      };
+
+      if (!(newObj.row >= images.length - 1 && newObj.index >= 2)) {
+        if (newObj.index < 2) {
+          newObj.index += 1;
+        } else {
+          newObj.index = 0;
+          newObj.row += 1;
         }
-        setImg(obj);
-        setOpen(true);
+      }
+
+      newObj.src = images[newObj.row].row[newObj.index].src;
+
+      setImg(newObj);
     }
+  };
 
-    const hanldeNext = () => {
-        if (img) {
-            const newObj = {
-                ...img
-            }
-        
-            if (!(newObj.row >= images.length - 1 && newObj.index >= 2)) {
+  const handleBack = () => {
+    if (img) {
+      const newObj = {
+        ...img,
+      };
 
-                if (newObj.index < 2) {
-                    newObj.index += 1;
-                } else {
-                    newObj.index = 0;
-                    newObj.row += 1;
-                }
-            }
-
-            newObj.src = images[newObj.row].row[newObj.index].src;
-    
-            setImg(newObj);            
+      if (!(newObj.row === 0 && newObj.index === 0)) {
+        if (newObj.index > 0) {
+          newObj.index -= 1;
+        } else {
+          newObj.index = 2;
+          newObj.row -= 1;
         }
+      }
+
+      newObj.src = images[newObj.row].row[newObj.index].src;
+
+      setImg(newObj);
     }
+  };
 
-    const hanldeBack = () => {
-        if (img) {
-            const newObj = {
-                ...img
-            }
+  return (
+    <div style={{ padding: "0 1rem" }}>
+      <Typography
+        variant="h1"
+        style={{
+          margin: "1rem",
+          textAlign: "center",
+          fontFamily: "Playfair Display",
+          fontSize: "3rem",
+        }}
+      >
+        Mayam
+      </Typography>
 
-            if (!(newObj.row === 0 && newObj.index === 0)) {
-                if (newObj.index > 0) {
-                    newObj.index -= 1;
-                } else {
-                    newObj.index = 2;
-                    newObj.row -= 1;
-                }
-            }
+      <TableContainer>
+        <Table>
+          <colgroup>
+            <col style={{ width: `${100 / 3}%` }}></col>
+            <col style={{ width: `${100 / 3}%` }}></col>
+            <col style={{ width: `${100 / 3}%` }}></col>
+          </colgroup>
+          <TableBody>
+            {images.map(({ row }, i) => {
+              return (
+                <TableRow>
+                  {row.map(({ src }, j) => {
+                    return (
+                      <TableCell
+                        onClick={() => handleChange(i, j)}
+                        style={{ lineHeight: 0, padding: "0.3rem" }}
+                        sx={{ borderBottom: "none" }}
+                        align="center"
+                      >
+                        <LazyLoadImage
+                          threshold={500}
+                          loading="eager"
+                          effect="blur"
+                          src={src}
+                          style={{ width: "100%" }}
+                          visibleByDefault={false}
+                        />
+                      </TableCell>
+                    );
+                  })}
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
 
-            newObj.src = images[newObj.row].row[newObj.index].src;
-
-            setImg(newObj);
-        }
-
-
-    }
-
-    return (
-        <div style={{ padding: "0 1rem" }}>   
-        <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"}}>Mayam</Typography>
-        
-        <TableContainer>
-            <Table>
-                <colgroup>
-                    <col style={{ width: `${100/3}%`}}></col>
-                    <col style={{ width: `${100/3}%`}}></col>
-                    <col style={{ width: `${100/3}%`}}></col>
-                </colgroup>
-                <TableBody>
-                    {
-                        images.map(({ row }, i) => {
-                            return (
-                                <TableRow>
-                                    {
-                                        row.map(({ src }, j) => {
-                                            return (
-                                                <TableCell onClick={() => handleChange(i, j)} style={{ lineHeight: 0, padding: "0.3rem" }} sx={{ borderBottom: "none"}} align="center">
-                                                    <img src={src} style={{ width: "100%"}} />
-                                                </TableCell>
-                                            )
-                                        })
-                                    }
-                                </TableRow>
-                            )
-                        })
-                    }
-                </TableBody>
-            </Table>
-        </TableContainer>
-        
-        <Dialog open={open} onClose={() => setOpen(false)} style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }} PaperProps={{ style: { overflowY: "hidden", }}} sx={{ overflowY: "hidden"}}>
-                <div style={{ height: "100%", width: "4rem", position: "absolute" }} onClick={hanldeBack}></div>
-                    <img src={img?.src} style={{ width: "100%" }} />
-                <div style={{ height: "100%", width: "4rem", position: "absolute", right: 0 }} onClick={hanldeNext}></div>
-            </Dialog>
+      <ImageDialog
+        onClose={() => setOpen(false)}
+        open={open}
+        pressBack={handleBack}
+        pressNext={handleNext}
+        img={img?.src}
+      />
     </div>
-    )
-}
+  );
+};
 
 export default Mayam;

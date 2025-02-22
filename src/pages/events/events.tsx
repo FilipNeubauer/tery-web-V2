@@ -1,5 +1,4 @@
 import {
-  Dialog,
   Table,
   TableBody,
   TableCell,
@@ -43,6 +42,8 @@ import IMG_8777 from "./assets/IMG_8777.jpeg";
 import IMG_8783 from "./assets/IMG_8783.jpeg";
 import { useState } from "react";
 import { IMG } from "../portfolio/portfolio";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import ImageDialog from "../../components/imageDialog";
 
 const Events = () => {
   const images = [
@@ -205,7 +206,7 @@ const Events = () => {
     setOpen(true);
   };
 
-  const hanldeNext = () => {
+  const handleNext = () => {
     if (img) {
       const newObj = {
         ...img,
@@ -226,7 +227,7 @@ const Events = () => {
     }
   };
 
-  const hanldeBack = () => {
+  const handleBack = () => {
     if (img) {
       const newObj = {
         ...img,
@@ -269,7 +270,15 @@ const Events = () => {
                         style={{ lineHeight: 0, padding: "0.3rem" }}
                         sx={{ borderBottom: "none" }}
                       >
-                        <img src={src} width="100%" />
+                        <LazyLoadImage
+                          threshold={500}
+                          effect="blur"
+                          src={src}
+                          width="100%"
+                          loading="eager"
+                          style={{ width: "100%", minHeight: 100 }}
+                          visibleByDefault={false}
+                        />
                       </TableCell>
                     );
                   })}
@@ -280,28 +289,13 @@ const Events = () => {
         </Table>
       </TableContainer>
 
-      <Dialog
-        open={open}
+      <ImageDialog
         onClose={() => setOpen(false)}
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
-        PaperProps={{ style: { overflowY: "hidden" } }}
-        sx={{ overflowY: "hidden" }}
-      >
-        <div
-          style={{ height: "100%", width: "4rem", position: "absolute" }}
-          onClick={hanldeBack}
-        ></div>
-        <img src={img?.src} style={{ width: "100%" }} />
-        <div
-          style={{
-            height: "100%",
-            width: "4rem",
-            position: "absolute",
-            right: 0,
-          }}
-          onClick={hanldeNext}
-        ></div>
-      </Dialog>
+        open={open}
+        pressBack={handleBack}
+        pressNext={handleNext}
+        img={img?.src}
+      />
     </div>
   );
 };

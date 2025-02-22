@@ -1,115 +1,119 @@
-import { Dialog, Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+} from "@mui/material";
 import { images } from "./photos";
 import { useState } from "react";
-// Images
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import ImageDialog from "../../components/imageDialog";
 
 export type IMG = {
-    src: string;
-    index: number;
-    row: number;
-}
+  src: string;
+  index: number;
+  row: number;
+};
 
 const Portfolio = () => {
+  const [open, setOpen] = useState(false);
+  const [img, setImg] = useState<IMG>();
 
-    const [open, setOpen] = useState(false);
+  const handleChange = (row: number, index: number) => {
+    setImg({ src: images[row].row[index].src, index, row });
+    setOpen(true);
+  };
 
-    const [img, setImg] = useState<IMG>();
+  const handleNext = () => {
+    if (img) {
+      let newRow = img.row;
+      let newIndex = img.index;
 
-    const handleChange = (row: number, index: number) => {
-        const obj = {
-            src: images[row].row[index].src,
-            index,
-            row
+      if (!(newRow >= images.length - 1 && newIndex >= 2)) {
+        if (newIndex < 2) {
+          newIndex += 1;
+        } else {
+          newIndex = 0;
+          newRow += 1;
         }
-        setImg(obj);
-        setOpen(true);
+      }
+
+      setImg({
+        row: newRow,
+        index: newIndex,
+        src: images[newRow].row[newIndex].src,
+      });
     }
+  };
 
-    const hanldeNext = () => {
-        if (img) {
-            const newObj = {
-                ...img
-            }
-        
-            if (!(newObj.row >= images.length - 1 && newObj.index >= 2)) {
+  const handleBack = () => {
+    if (img) {
+      let newRow = img.row;
+      let newIndex = img.index;
 
-                if (newObj.index < 2) {
-                    newObj.index += 1;
-                } else {
-                    newObj.index = 0;
-                    newObj.row += 1;
-                }
-            }
-
-            newObj.src = images[newObj.row].row[newObj.index].src;
-    
-            setImg(newObj);            
+      if (!(newRow === 0 && newIndex === 0)) {
+        if (newIndex > 0) {
+          newIndex -= 1;
+        } else {
+          newIndex = 2;
+          newRow -= 1;
         }
+      }
+
+      setImg({
+        row: newRow,
+        index: newIndex,
+        src: images[newRow].row[newIndex].src,
+      });
     }
+  };
 
-    const hanldeBack = () => {
-        if (img) {
-            const newObj = {
-                ...img
-            }
+  return (
+    <div style={{ padding: "2rem 1rem 1rem" }}>
+      <TableContainer>
+        <Table>
+          <colgroup>
+            <col style={{ width: "33%" }} />
+            <col style={{ width: "33%" }} />
+            <col style={{ width: "33%" }} />
+          </colgroup>
+          <TableBody>
+            {images.map(({ row }, i) => (
+              <TableRow key={i}>
+                {row.map(({ src }, j) => (
+                  <TableCell
+                    key={`${i}-${j}`}
+                    onClick={() => handleChange(i, j)}
+                    style={{ lineHeight: 0, padding: "0.3rem" }}
+                    sx={{ borderBottom: "none" }}
+                    align="center"
+                  >
+                    <LazyLoadImage
+                      threshold={500}
+                      effect="blur"
+                      src={src}
+                      style={{ width: "100%", minHeight: 100 }}
+                      visibleByDefault={false}
+                    />
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
 
-            if (!(newObj.row === 0 && newObj.index === 0)) {
-                if (newObj.index > 0) {
-                    newObj.index -= 1;
-                } else {
-                    newObj.index = 2;
-                    newObj.row -= 1;
-                }
-            }
-
-            newObj.src = images[newObj.row].row[newObj.index].src;
-
-            setImg(newObj);
-        }
-
-
-    }
-
-    return (
-        <div style={{ padding: "2rem 1rem 1rem" }}>   
-            {/* <Typography variant="h1" style={{ margin: "1rem", textAlign: "center", fontFamily: "Playfair Display", fontSize: "3rem"}}>Portfolio</Typography> */}
-            
-            <TableContainer>
-                <Table>
-                    <colgroup>
-                        <col style={{ width: `${100/3}%`}}></col>
-                        <col style={{ width: `${100/3}%`}}></col>
-                        <col style={{ width: `${100/3}%`}}></col>
-                    </colgroup>
-                    <TableBody>
-                        {
-                            images.map(({ row }, i) => {
-                                return (
-                                    <TableRow>
-                                        {
-                                            row.map(({ src }, j) => {
-                                                return (
-                                                    <TableCell onClick={() => handleChange(i, j)} style={{ lineHeight: 0, padding: "0.3rem" }} sx={{ borderBottom: "none"}} align="center">
-                                                        <img src={src} style={{ width: "100%"}} />
-                                                    </TableCell>
-                                                )
-                                            })
-                                        }
-                                    </TableRow>
-                                )
-                            })
-                        }
-                    </TableBody>
-                </Table>
-            </TableContainer>
-
-            <Dialog open={open} onClose={() => setOpen(false)} style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }} PaperProps={{ style: { overflowY: "hidden", }}} sx={{ overflowY: "hidden"}}>
-                <div style={{ height: "100%", width: "4rem", position: "absolute" }} onClick={hanldeBack}></div>
-                    <img src={img?.src} style={{ width: "100%" }} />
-                <div style={{ height: "100%", width: "4rem", position: "absolute", right: 0 }} onClick={hanldeNext}></div>
-            </Dialog>
-        </div>
-    )
-}
+      <ImageDialog
+        onClose={() => setOpen(false)}
+        open={open}
+        pressBack={handleBack}
+        pressNext={handleNext}
+        img={img?.src}
+      />
+    </div>
+  );
+};
 
 export default Portfolio;

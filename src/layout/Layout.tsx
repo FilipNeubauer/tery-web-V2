@@ -138,9 +138,9 @@ const Layout = ({ children }: Props) => {
             <a
               target="_blank"
               style={{ color: "black" }}
-              href="mailto:terystoklasova@seznam.cz"
+              href="mailto:azeretstudios@gmail.com"
             >
-              terystoklasova@seznam.cz
+              azeretstudios@gmail.com
             </a>
           </Typography>
           {/* <Typography style={{textAlign:"right",  fontSize: "0.8rem", color: "white", fontWeight: 100}}>TEL <a target="_blank" style={{ color: "white" }} href="tel:+420 605 575 031">+420 605 575 031</a></Typography> */}

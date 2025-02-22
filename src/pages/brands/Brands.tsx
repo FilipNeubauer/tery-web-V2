@@ -6,6 +6,7 @@ import IMG_0679 from "./mayam/assets/IMG_0679.jpg";
 import IMG_7464 from "./loice/assets/IMG_7464.jpg";
 import { Link } from "react-router-dom";
 import { colors } from "../../consts/colors";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Brands = () => {
   return (
@@ -29,7 +30,14 @@ const Brands = () => {
       >
         <div style={{ maxWidth: "20rem", padding: "1rem" }}>
           <Link to={"/brands/wearofabsolue"}>
-            <img src={IMG_9866} style={{ width: "100%" }} />
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              effect="blur"
+              src={IMG_9866}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
+            />
           </Link>
           <Typography
             variant="h2"
@@ -44,27 +52,17 @@ const Brands = () => {
             Wear of Absolue
           </Typography>
         </div>
-        <div style={{ maxWidth: "20rem", padding: "1rem" }}>
-          <Link to={"/brands/lashstudio"}>
-            <img src={IMG_5147} style={{ width: "100%" }} />
-          </Link>
-          <Typography
-            variant="h2"
-            style={{
-              margin: "1rem",
-              textAlign: "center",
-              fontFamily: "Playfair Display",
-              fontSize: "1.5rem",
-              color: colors.black,
-            }}
-          >
-            Lash Studio
-          </Typography>
-        </div>
 
         <div style={{ maxWidth: "20rem", padding: "1rem" }}>
           <Link to={"/brands/loice"}>
-            <img src={IMG_7464} style={{ width: "100%" }} />
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              effect="blur"
+              src={IMG_7464}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
+            />
           </Link>
           <Typography
             variant="h2"
@@ -81,48 +79,16 @@ const Brands = () => {
         </div>
 
         <div style={{ maxWidth: "20rem", padding: "1rem" }}>
-          <Link to={"/brands/conceptflannel"}>
-            <img src={IMG_6945} style={{ width: "100%" }} />
-          </Link>
-          <Typography
-            variant="h2"
-            style={{
-              margin: "1rem",
-              textAlign: "center",
-              fontFamily: "Playfair Display",
-              fontSize: "1.5rem",
-              color: colors.black,
-            }}
-          >
-            Concept Flannel
-          </Typography>
-        </div>
-
-        <div style={{ maxWidth: "20rem", padding: "1rem" }}>
-          <Link to={"/brands/mayam"}>
-            <img src={IMG_0679} style={{ width: "100%" }} />
-          </Link>
-          <Typography
-            variant="h2"
-            style={{
-              margin: "1rem",
-              textAlign: "center",
-              fontFamily: "Playfair Display",
-              fontSize: "1.5rem",
-              color: colors.black,
-            }}
-          >
-            Mayam
-          </Typography>
-        </div>
-
-        <div style={{ maxWidth: "20rem", padding: "1rem" }}>
           <Link to={"/brands/footshop"}>
-            <img
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              effect="blur"
               src={
                 "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7149.jpeg"
               }
-              style={{ width: "100%" }}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
             />
           </Link>
           <Typography
@@ -141,11 +107,15 @@ const Brands = () => {
 
         <div style={{ maxWidth: "20rem", padding: "1rem" }}>
           <Link to={"/brands/unlike"}>
-            <img
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              effect="blur"
               src={
                 "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8356.jpeg"
               }
-              style={{ width: "100%" }}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
             />
           </Link>
           <Typography
@@ -159,6 +129,80 @@ const Brands = () => {
             }}
           >
             Unlike
+          </Typography>
+        </div>
+
+        <div style={{ maxWidth: "20rem", padding: "1rem" }}>
+          <Link to={"/brands/lashstudio"}>
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              effect="blur"
+              src={IMG_5147}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
+            />
+          </Link>
+          <Typography
+            variant="h2"
+            style={{
+              margin: "1rem",
+              textAlign: "center",
+              fontFamily: "Playfair Display",
+              fontSize: "1.5rem",
+              color: colors.black,
+            }}
+          >
+            Lash Studio
+          </Typography>
+        </div>
+
+        <div style={{ maxWidth: "20rem", padding: "1rem" }}>
+          <Link to={"/brands/conceptflannel"}>
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              src={IMG_6945}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
+            />
+          </Link>
+          <Typography
+            variant="h2"
+            style={{
+              margin: "1rem",
+              textAlign: "center",
+              fontFamily: "Playfair Display",
+              fontSize: "1.5rem",
+              color: colors.black,
+            }}
+          >
+            Concept Flannel
+          </Typography>
+        </div>
+
+        <div style={{ maxWidth: "20rem", padding: "1rem" }}>
+          <Link to={"/brands/mayam"}>
+            <LazyLoadImage
+              threshold={500}
+              loading="eager"
+              effect="blur"
+              src={IMG_0679}
+              style={{ width: "100%", minHeight: 100 }}
+              visibleByDefault={false}
+            />
+          </Link>
+          <Typography
+            variant="h2"
+            style={{
+              margin: "1rem",
+              textAlign: "center",
+              fontFamily: "Playfair Display",
+              fontSize: "1.5rem",
+              color: colors.black,
+            }}
+          >
+            Mayam
           </Typography>
         </div>
       </div>

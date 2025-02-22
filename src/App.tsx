@@ -8,7 +8,6 @@ import LashStudio from "./pages/brands/lash-studio/LasStudio";
 import ConceptFlannel from "./pages/brands/concept-flannel/ConceptFlannel";
 import Mayam from "./pages/brands/mayam/Mayam";
 import Brands from "./pages/brands/Brands";
-import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Loice from "./pages/brands/loice/Loice";
 import Footshop from "./pages/brands/footshop/Footshop";
@@ -19,10 +18,6 @@ function App() {
     {
       path: "/",
       element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <About />,
     },
     {
       path: "/portfolio",
