@@ -110,7 +110,7 @@ const Home = () => {
             fontWeight: "normal",
           }}
         >
-          Tereza Stoklasová
+          THE JOURNEY
         </p>
         <p
           style={{
@@ -124,9 +124,24 @@ const Home = () => {
             color: colors.black,
           }}
         >
-          I’m a photographer based in Prague focusing on fashion, models,
-          lifestyle, and events. I’m passionate about creative projects and open
-          to any concept. Let’s bring your vision to life!
+          Tereza is a Prague freelance photographer specializing in fashion
+          editorials, portraiture, and event documentation. Her work captures
+          individuality and emotion through a refined yet expressive lens,
+          blending modern aesthetics with cinematic lighting, rich contrasts,
+          and a strong editorial sensibility.
+          <br />
+          <br /> Her earliest memory of photography is watching her mother take
+          pictures with a small Nikon camera. One she wished for so much that
+          she asked for the same on her seventh birthday. Over time, this
+          fascination turned into passion, but it was a close friend who first
+          convinced her to take it seriously, always pointing out her natural
+          eye for striking imagery. <br />
+          <br /> In 2022, she founded Absolue Agency, creating a platform for
+          unique looking models and fostering diversity in the industry. Over
+          time, her focus shifted toward independent creative work, leading to
+          the launch of Azeret Studios in 2025. With this new venture, she fully
+          embraces her personal artistic vision, continuously pushing creative
+          boundaries and exploring new ways to tell stories through her lens.
         </p>
       </div>
     </div>
