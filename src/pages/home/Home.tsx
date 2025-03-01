@@ -16,7 +16,7 @@ const styles: StyleSheet = {
     // alignItems: "center",
     // overflow: "hidden",
     // height: "100vh"
-    backgroundImage: `url(https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/home/IMG_3316.jpeg)`,
+    backgroundImage: `url(https://ik.imagekit.io/rc0aoecf7/home/IMG_3316.jpeg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     // "-webkit-background-size": "cover",
