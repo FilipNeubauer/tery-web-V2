@@ -9,71 +9,72 @@ import { IMG } from "../portfolio/portfolio";
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../utils/resizeImg";
 
 const Events = () => {
   const images = [
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1249.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1249.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1251.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1251.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1260.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8780.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8779.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8771.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1260.jpeg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8783.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8780.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8776.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8779.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8777.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0676.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0719.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0689.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8771.jpeg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0705.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8783.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0666.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8776.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0727.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8777.jpeg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0676.jpeg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0719.jpeg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0689.jpeg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0705.jpeg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0666.jpeg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0727.jpeg",
         },
       ],
     },
@@ -238,7 +239,7 @@ const Events = () => {
                         <LazyLoadImage
                           threshold={500}
                           effect="blur"
-                          src={src}
+                          src={getOptimizedImageUrl(src)}
                           width="100%"
                           loading="eager"
                           style={{ width: "100%", minHeight: 100 }}
