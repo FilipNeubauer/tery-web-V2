@@ -11,6 +11,7 @@ import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../../utils/resizeImg";
 
 const ConceptFlannel = () => {
   const [open, setOpen] = useState(false);
@@ -106,7 +107,7 @@ const ConceptFlannel = () => {
                           threshold={500}
                           loading="eager"
                           effect="blur"
-                          src={src}
+                          src={getOptimizedImageUrl(src)}
                           style={{ width: "100%", minHeight: 100 }}
                           visibleByDefault={false}
                         />

@@ -10,83 +10,84 @@ import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../../utils/resizeImg";
 
 const images = [
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8356.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8356.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8330.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8330.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8321.jpeg",
-      },
-    ],
-  },
-  {
-    row: [
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8153.jpeg",
-      },
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8190.jpeg",
-      },
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8176.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8321.jpeg",
       },
     ],
   },
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_7772.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8153.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_7735.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8190.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_7744.jpeg",
-      },
-    ],
-  },
-  {
-    row: [
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8046.jpeg",
-      },
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8078.jpeg",
-      },
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8008.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8176.jpeg",
       },
     ],
   },
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8208.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_7772.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8233.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_7735.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8247.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_7744.jpeg",
       },
     ],
   },
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_7959.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8046.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_7946.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8078.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_7861.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8008.jpeg",
+      },
+    ],
+  },
+  {
+    row: [
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8208.jpeg",
+      },
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8233.jpeg",
+      },
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8247.jpeg",
+      },
+    ],
+  },
+  {
+    row: [
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_7959.jpeg",
+      },
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_7946.jpeg",
+      },
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/unlike/IMG_7861.jpeg",
       },
     ],
   },
@@ -185,7 +186,7 @@ const Unlike = () => {
                           threshold={500}
                           loading="eager"
                           effect="blur"
-                          src={src}
+                          src={getOptimizedImageUrl(src)}
                           width={"100%"}
                           visibleByDefault={false}
                           style={{ minHeight: 100 }}

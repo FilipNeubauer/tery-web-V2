@@ -10,6 +10,7 @@ import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import ImageDialog from "../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../utils/resizeImg";
 
 export type IMG = {
   src: string;
@@ -93,7 +94,7 @@ const Portfolio = () => {
                     <LazyLoadImage
                       threshold={500}
                       effect="blur"
-                      src={src}
+                      src={getOptimizedImageUrl(src)}
                       style={{ width: "100%", minHeight: 100 }}
                       visibleByDefault={false}
                     />

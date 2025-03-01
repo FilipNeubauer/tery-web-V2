@@ -8,93 +8,76 @@ import {
 } from "@mui/material";
 
 // IMAGES
-import IMG_9866 from "./assets/IMG_9866.jpg";
-import IMG_0180 from "./assets/IMG_0180.jpg";
-
-import IMG_9781 from "./assets/IMG_9781.jpg";
-
-import IMG_6238 from "./assets/IMG_6238.jpg";
-import IMG_9976 from "./assets/IMG_9976.jpg";
-import IMG_9976_2 from "./assets/IMG_9976_2.jpg";
-import IMG_9953 from "./assets/IMG_9953.jpg";
-import IMG_9083 from "./assets/IMG_9083.jpg";
-import IMG_9532 from "./assets/IMG_9532.jpg";
-import IMG_0127 from "./assets/IMG_0127.jpg";
-import IMG_0111 from "./assets/IMG_0111.jpg";
-import IMG_0182 from "./assets/IMG_0182.jpg";
-import IMG_9893 from "./assets/IMG_9893.jpg";
-
-import IMG_6216 from "./assets/IMG_6216.jpg";
-import IMG_5205 from "./assets/IMG_5205.jpg";
 import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../../utils/resizeImg";
 
 const WearOfAbsolue = () => {
   const images = [
     {
       row: [
         {
-          src: IMG_9866,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9866.jpg",
         },
         {
-          src: IMG_0180,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_0180.jpg",
         },
         {
-          src: IMG_9781,
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: IMG_6238,
-        },
-        {
-          src: IMG_9976,
-        },
-        {
-          src: IMG_9976_2,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9781.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: IMG_9953,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_6238.jpg",
         },
         {
-          src: IMG_9083,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9976.jpg",
         },
         {
-          src: IMG_0111,
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: IMG_9532,
-        },
-        {
-          src: IMG_0127,
-        },
-        {
-          src: IMG_6216,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9976_2.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: IMG_0182,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9953.jpg",
         },
         {
-          src: IMG_9893,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9083.jpg",
         },
         {
-          src: IMG_5205,
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_0111.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9532.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_0127.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_6216.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_0182.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9893.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_5205.jpg",
         },
       ],
     },
@@ -191,7 +174,7 @@ const WearOfAbsolue = () => {
                           threshold={500}
                           loading="eager"
                           effect="blur"
-                          src={src}
+                          src={getOptimizedImageUrl(src)}
                           width={"100%"}
                           style={{ width: "100%", minHeight: 100 }}
                           visibleByDefault={false}

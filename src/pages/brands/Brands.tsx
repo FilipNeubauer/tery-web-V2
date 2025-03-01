@@ -1,9 +1,4 @@
 import { Typography } from "@mui/material";
-import IMG_9866 from "./wearofabsolue/assets/IMG_9866.jpg";
-import IMG_5147 from "./lash-studio/assets/IMG_5147.jpg";
-import IMG_6945 from "./concept-flannel/assets/IMG_6945.jpg";
-import IMG_0679 from "./mayam/assets/IMG_0679.jpg";
-import IMG_7464 from "./loice/assets/IMG_7464.jpg";
 import { Link } from "react-router-dom";
 import { colors } from "../../consts/colors";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -34,7 +29,9 @@ const Brands = () => {
               threshold={500}
               loading="eager"
               effect="blur"
-              src={IMG_9866}
+              src={
+                "https://ik.imagekit.io/rc0aoecf7/wearofabsolue/IMG_9866.jpg"
+              }
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />
@@ -59,7 +56,7 @@ const Brands = () => {
               threshold={500}
               loading="eager"
               effect="blur"
-              src={IMG_7464}
+              src={"https://ik.imagekit.io/rc0aoecf7/loice/IMG_7464.jpg"}
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />
@@ -84,9 +81,7 @@ const Brands = () => {
               threshold={500}
               loading="eager"
               effect="blur"
-              src={
-                "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7149.jpeg"
-              }
+              src={"https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7149.jpeg"}
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />
@@ -111,9 +106,7 @@ const Brands = () => {
               threshold={500}
               loading="eager"
               effect="blur"
-              src={
-                "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/unlike/IMG_8356.jpeg"
-              }
+              src={"https://ik.imagekit.io/rc0aoecf7/unlike/IMG_8356.jpeg"}
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />
@@ -138,7 +131,7 @@ const Brands = () => {
               threshold={500}
               loading="eager"
               effect="blur"
-              src={IMG_5147}
+              src={"https://ik.imagekit.io/rc0aoecf7/lash-studio/IMG_5147.jpg"}
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />
@@ -162,7 +155,7 @@ const Brands = () => {
             <LazyLoadImage
               threshold={500}
               loading="eager"
-              src={IMG_6945}
+              src={"https://ik.imagekit.io/rc0aoecf7/assets/IMG_6945.jpg"}
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />
@@ -187,7 +180,7 @@ const Brands = () => {
               threshold={500}
               loading="eager"
               effect="blur"
-              src={IMG_0679}
+              src={"https://ik.imagekit.io/rc0aoecf7/mayam/IMG_0679.jpg"}
               style={{ width: "100%", minHeight: 100 }}
               visibleByDefault={false}
             />

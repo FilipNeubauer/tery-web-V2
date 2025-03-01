@@ -11,6 +11,7 @@ import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../../utils/resizeImg";
 
 const LashStudio = () => {
   const [open, setOpen] = useState(false);
@@ -104,7 +105,7 @@ const LashStudio = () => {
                           threshold={500}
                           loading="eager"
                           effect="blur"
-                          src={src}
+                          src={getOptimizedImageUrl(src)}
                           width={"100%"}
                           style={{ width: "100%", minHeight: 100 }}
                           visibleByDefault={false}

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 //
 import LogoIcon from "./assets/logo.svg";
 import { colors } from "../../consts/colors";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export interface StyleSheet {
   [key: string]: React.CSSProperties;
@@ -39,7 +38,7 @@ const styles: StyleSheet = {
 };
 
 const Home = () => {
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 1200);
+  const [, setIsWideScreen] = useState(window.innerWidth > 1200);
 
   useEffect(() => {
     const handleResize = () => {

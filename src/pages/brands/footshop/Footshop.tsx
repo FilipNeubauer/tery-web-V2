@@ -10,57 +10,58 @@ import { useState } from "react";
 import { IMG } from "../../portfolio/portfolio";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../../components/imageDialog";
+import { getOptimizedImageUrl } from "../../../utils/resizeImg";
 
 const images = [
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7145.JPG",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7145.JPG",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7292.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7292.jpeg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7149.jpeg",
-      },
-    ],
-  },
-  {
-    row: [
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7115.JPG",
-      },
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7103.JPG",
-      },
-      {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_7079.JPG",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7149.jpeg",
       },
     ],
   },
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_5901.jpg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7115.JPG",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_5903.jpg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7103.JPG",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_5904.jpg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_7079.JPG",
       },
     ],
   },
   {
     row: [
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_5906.jpeg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_5901.jpg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_5907.jpg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_5903.jpg",
       },
       {
-        src: "https://imbzpefqojlswzdotwcj.supabase.co/storage/v1/object/public/images/brands/footshop/IMG_5908.jpg",
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_5904.jpg",
+      },
+    ],
+  },
+  {
+    row: [
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_5906.jpeg",
+      },
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_5907.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/rc0aoecf7/footshop/IMG_5908.jpg",
       },
     ],
   },
@@ -159,7 +160,7 @@ const Footshop = () => {
                           threshold={500}
                           loading="eager"
                           effect="blur"
-                          src={src}
+                          src={getOptimizedImageUrl(src)}
                           width={"100%"}
                           style={{ width: "100%", minHeight: 100 }}
                           visibleByDefault={false}
