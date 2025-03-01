@@ -5,9 +5,8 @@ import {
   TableContainer,
   TableRow,
 } from "@mui/material";
-
-import { useState } from "react";
 import { IMG } from "../portfolio/portfolio";
+import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageDialog from "../../components/imageDialog";
 
@@ -16,143 +15,143 @@ const Events = () => {
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_1249.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1249.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_1251.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1251.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_1260.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_8780.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_8779.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_8771.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1260.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_8783.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8780.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_8776.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8779.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_8777.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_0676.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_0719.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_0689.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8771.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_0705.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8783.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_0666.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8776.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_0727.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_1790_2.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_1798_2.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_1813_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_8777.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_5873_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0676.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_5856_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0719.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_5791_2.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_3941_2.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_3786_2.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_3781_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0689.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_5877_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0705.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_5782_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0666.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_5800_2.jpg",
-        },
-      ],
-    },
-    {
-      row: [
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_9596_2.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_9574_2.jpg",
-        },
-        {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_9591_2.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_0727.jpg",
         },
       ],
     },
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_3760.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1790_2.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_3933.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1798_2.jpg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/portfolio/IMG_3785.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_1813_2.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_5873_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_5856_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_5791_2.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3941_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3786_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3781_2.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_5877_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_5782_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_5800_2.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_9596_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_9574_2.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_9591_2.jpg",
+        },
+      ],
+    },
+    {
+      row: [
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3760.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3933.jpg",
+        },
+        {
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3785.jpg",
         },
       ],
     },
