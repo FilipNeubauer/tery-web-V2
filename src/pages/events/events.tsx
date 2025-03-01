@@ -146,13 +146,13 @@ const Events = () => {
     {
       row: [
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3760.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3760.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3933.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3933.jpeg",
         },
         {
-          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3785.jpg",
+          src: "https://ik.imagekit.io/rc0aoecf7/events/IMG_3785.jpeg",
         },
       ],
     },
